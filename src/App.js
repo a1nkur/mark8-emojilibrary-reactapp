@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 function App() {
-  const [emojiLibrary, setEmojiLibrary] = useState({
+  const emojiLibrary = {
     "🙈": "See-No-Evil Monkey",
     "🙉": "Hear-No-Evil Monkey",
     "🙊": "Speak-No-Evil Monkey",
@@ -39,7 +39,7 @@ function App() {
     "🐝": "Honeybee",
     "🦂": "Scorpion",
     "🐞": "Lady Beetle",
-  });
+  };
 
   const [placeholder, setPlaceHolder] = useState("");
   const [selectedEmoji, setSelectedEmoji] = useState("");
