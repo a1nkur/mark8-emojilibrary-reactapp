@@ -61,11 +61,17 @@ function App() {
 
   const handleChange = e => {
     for (let i of emojiArr) {
+      // i === 🐪
       if (i === e.target.value) {
-        setPlaceHolder(emojiLibrary[i]);
-        setSelectedEmoji(e.target.value);
+        // 🐪 === 🐪
+        console.log(i === e.target.value, "if true");
+        console.log(emojiLibrary[i], "if true");
         setError(false);
+        setPlaceHolder(emojiLibrary[e.target.value]); // Camel
+        setSelectedEmoji(e.target.value); //emoji
+        break;
       } else {
+        console.log("hgfhgfhgfj");
         setError(true);
         setPlaceHolder(" ");
         setSelectedEmoji(e.target.value);
